@@ -50,24 +50,24 @@ export default function AdicionarProdutos (){
 			<div>
             <h1>Adicionar Produto</h1>
             <div>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <fieldset>
                             <legend>Informações do Produto</legend>
                             <input type="hidden" name="id"/>
                         <div>
                             <label htmlFor="idProduto">Nome do produto</label>
-                            <input type="text" name = "nome" id="idProd"/>
+                            <input type="text" name = "nome" id="idProd" onChange={handleChange}/>
                         </div>
                         <div>
                             <label htmlFor="idDesc">Descrição</label>
-                            <input type="text" name = "desc" id="idDesc"/>
+                            <input type="text" name = "desc" id="idDesc" onChange={handleChange}/>
                         </div>
                         <div>
                             <label htmlFor="idPreco">Preço do produto</label>
-                            <input type="text" name = "preco" id="idPreco"/>
+                            <input type="text" name = "preco" id="idPreco" onChange={handleChange}/>
                         </div>
                         <button>Adicionar</button>
-                        <button>Cancelar</button>
+                        <button  onClick={handleCancel}>Cancelar</button>
                     </fieldset>
                 </form>
             </div>
