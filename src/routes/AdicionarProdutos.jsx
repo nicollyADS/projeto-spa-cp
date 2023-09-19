@@ -43,6 +43,8 @@ export default function AdicionarProdutos (){
         return navegacao("/produtos")
     }
 
+    document.title = "Adicionar Produto";
+
 	return (
 		<>
 			<div>
