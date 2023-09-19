@@ -32,6 +32,13 @@ export default function AdicionarProdutos (){
         setProduto({...produto, [name]:value})
     }
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        ListaProdutos.push(produto);
+
+        return navegacao("/produtos"); 
+    }
+
 	return (
 		<>
 			<div>
