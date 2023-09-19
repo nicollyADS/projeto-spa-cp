@@ -17,6 +17,7 @@ export default function AdicionarProdutos (){
     }   
     const novoId = criarId();
 
+
     const [produto, setProduto] = useState({
         id: novoId,
         nome: "",
@@ -24,6 +25,12 @@ export default function AdicionarProdutos (){
         preco: "",
         img: "https://picsum.photos/100/100"
     });
+
+
+    const handleChange = (event) =>{
+        const{name,value} = event.target;
+        setProduto({...produto, [name]:value})
+    }
 
 	return (
 		<>
