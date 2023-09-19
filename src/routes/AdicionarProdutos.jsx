@@ -3,6 +3,9 @@ import { ListaProdutos } from "../components/ListaProdutos";
 import { useState } from "react";
 
 export default function AdicionarProdutos (){
+
+    const navegacao = useNavigate();
+
 	return (
 		<>
 			<div>
