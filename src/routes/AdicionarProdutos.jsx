@@ -17,6 +17,14 @@ export default function AdicionarProdutos (){
     }   
     const novoId = criarId();
 
+    const [produto, setProduto] = useState({
+        id: novoId,
+        nome: "",
+        desc: "",
+        preco: "",
+        img: "https://picsum.photos/100/100"
+    });
+
 	return (
 		<>
 			<div>
