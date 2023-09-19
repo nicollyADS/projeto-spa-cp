@@ -6,6 +6,17 @@ export default function AdicionarProdutos (){
 
     const navegacao = useNavigate();
 
+    function criarId(){
+        let maiorId = 0;
+        ListaProdutos.forEach(elemento=>{
+            if (elemento.id > maiorId){
+                maiorId = elemento.id;
+            }
+        })
+        return maiorId + 1;
+    }   
+    const novoId = criarId();
+
 	return (
 		<>
 			<div>
